@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.P.A.R.K.</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="absolute-nav">
+      <img src="img/Spark.svg" alt="" />
+      <div class="items">
+        <a href="#home"><i class="fa fa-home" aria-hidden="true"></i></a>
+        <a href="#tat"><i class="fa fa-lightbulb-o" arxia-hidden="true"></i></a>
+        <a href="#education"><i class="fa fa-book" aria-hidden="true"></i></a>
+        <a href="#event"><i class="fa fa-bell" aria-hidden="true"></i></a>
+        <a href="#" id="darkModeToggleLeft"
+          ><i class="fa fa-moon-o" aria-hidden="true"></i
+        ></a>
+      </div>
+    </div>
+
+      <!-- MULAI HP -->
+      <div class="navhp">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu">
+          <div class="navhp-item">
+            <a href="#home"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+          </div>
+          <div class="navhp-item">
+            <a href="#tat"
+              ><i class="fa fa-lightbulb-o" aria-hidden="true"></i>&nbsp;Tips &
+              Tricks</a
+            >
+          </div>
+          <div class="navhp-item">
+            <a href="#education"
+              ><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Education</a>
+          </div>
+          <div class="navhp-item">
+            <a href="#event"
+              ><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;Programs</a>
+          </div>
+          <div class="navhp-item">
+            <a href="#" id="darkModeToggle"
+              ><i class="fa fa-moon-o" aria-hidden="true"></i>&nbsp;Theme</a>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  
+  // Add or remove the 'active' class to apply the animation
+  if (menu.classList.contains('active')) {
+    menu.classList.remove('active');
+    setTimeout(() => (menu.style.display = 'none')); // Wait for animation before hiding
+  } else {
+    menu.style.display = 'flex'; // Show menu
+    setTimeout(() => menu.classList.add('active')); // Add 'active' after a short delay
+  }
+}
+
+      </script>
+<!-- END HP -->
+
+    <div class="page-1" id="home">
+      <div class="title">
+        <img src="img/Spark.svg" alt="" />
+        <i><h1>Welcome to SPARK Powering a Brighter, Greener Future!</h1></i>
+        <h5>
+          Let's embrace sustainable energy to preserve resources and create a
+          world where every watt matters.
+        </h5>
+        <div class="btn">
+          <a href="#abouts"><i>Learn More</i></a>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="navbar-item">
+          <a href="#home"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+        </div>
+        <div class="navbar-item">
+          <a href="#tat"
+            ><i class="fa fa-lightbulb-o" aria-hidden="true"></i>&nbsp;Tips &
+            Tricks</a
+          >
+        </div>
+        <div class="navbar-item">
+          <a href="#education"
+            ><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Education</a
+          >
+        </div>
+        <div class="navbar-item">
+          <a href="#event"
+            ><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;Programs</a
+          >
+        </div>
+        <div class="navbar-item">
+          <a href="#" id="darkModeToggle"
+            ><i class="fa fa-moon-o" aria-hidden="true"></i>&nbsp;Theme</a
+          >
+        </div>
+      </div>
+    </div>
+    <hr class="black-line1" />
+    
+
+    <div class="abot" id="abouts">
+      <section id="about" class="hidden">
+        <h1>About Us</h1>
+        <p>
+          Welcome to Spark! We are dedicated to inspiring people to adopt smart
+          energy solutions for a sustainable future. <br />
+          We offer innovative ideas, practical tips, and interactive games to
+          help reduce electricity waste and create a better planet. <br />Join
+          us in taking small steps that lead to significant changes toward
+          energy-efficient and responsible living!
+        </p>
+      </section>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const aboutSection = document.getElementById("about");
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  aboutSection.classList.add("visible");
+                } else {
+                  aboutSection.classList.remove("visible");
+                }
+              });
+            },
+            { threshold: 0.8 }
+          );
+
+          observer.observe(aboutSection);
+        });
+      </script>
+    </div>
+    <div id="tat"></div>
+    <div class="page-2">
+      <h5>Tips and Tricks</h5>
+      <div class="tat-box">
+        <div class="tat-origin">
+          <img
+            src="img/DALL·E 2024-12-09 09.10.13 - A cartoon-style illustration of a hand reaching to turn off a light switch on a wall, with the hand in the motion of closing or flipping the switch do.webp"
+            alt=""
+          />
+          <div class="text-box1">
+            <h1>Turn off the lights</h1>
+            <p>when not in use</p>
+          </div>
+        </div>
+        <div class="tat-origin">
+          <img
+            src="img/DALL·E 2024-12-09 09.19.17 - A cartoon-style illustration of a hand reaching to open a window, with the hand in the motion of pushing the window upward. The setting is a simple, m.webp"
+            alt=""
+          />
+          <div class="text-box1">
+            <h1>Open the windows</h1>
+            <p>to allow proper air circulation</p>
+          </div>
+        </div>
+        <div class="tat-origin">
+          <img
+            src="img/DALL·E 2024-12-09 09.52.58 - A simple cartoon-style illustration showcasing energy-efficient appliances in a bright and cheerful indoor setting. The scene features a sleek energy-.webp"
+            alt=""
+          />
+          <div class="text-box1">
+            <h1>Use household appliances</h1>
+            <p>that consume less electricity</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-3">
+      <div class="jdledu" id="education"><h6>Education</h6></div>
+      <div class="platform-selector">
+        <div class="platforms-header">
+          <h5>Why Should We Save Electrical Energy?</h5>
+          <h2>
+            Saving electrical energy reduces costs, lowers carbon emissions, and
+            supports sustainability for future generations.
+          </h2>
+        </div>
+
+        <div class="platforms-container">
+          <div class="platform">
+            <div class="platform-title">
+              <h3>Causes of Excessive Electricity Use</h3>
+              <span class="arrow">&#9660;</span>
+            </div>
+            <div class="platform-body">
+              <p>
+                • Inefficient electrical devices, such as incandescent bulbs.
+                <br />
+                • Electronics left on or in standby mode. <br />
+                • Improper temperature settings on air conditioners and heaters.
+                <br />
+                • Habits like forgetting to turn off lights or electrical
+                appliances.
+              </p>
+            </div>
+          </div>
+
+          <div class="platform">
+            <div class="platform-title">
+              <h3>Three Main Impacts of Excessive Electricity Use</h3>
+              <span class="arrow">&#9660;</span>
+            </div>
+            <div class="platform-body">
+              <p>
+                <b>• Increased Carbon Emissions : </b>Overconsumption of
+                electricity from fossil fuel power plants produces greenhouse
+                gases, exacerbating climate change. <br />
+                <b>• Energy Crisis : </b>Excessive use accelerates the depletion
+                of non-renewable energy resources such as coal and natural gas.
+                <br />
+                <b>• High Electricity Bills : </b>Inefficient energy use
+                directly raises household and business operating costs.
+              </p>
+            </div>
+          </div>
+
+          <div class="platform">
+            <div class="platform-title">
+              <h3>Solutions to Address Excessive Electricity Use</h3>
+              <span class="arrow">&#9660;</span>
+            </div>
+            <div class="platform-body">
+              <p>
+                <b>• Reduce Carbon Emissions : </b>Use renewable energy sources,
+                such as solar panels or eco-friendly alternatives, to replace
+                fossil fuels. <br />
+                <b>• Improve Energy Efficiency : </b>Utilize energy-saving
+                devices and turn off electronics when not in use to minimize
+                consumption. <br />
+                <b>• Cost Management : </b>Educate the public about efficient
+                consumption patterns and promote smart technologies like smart
+                meters to help control energy usage.
+              </p>
+            </div>
+          </div>
+
+          <div class="platform">
+            <div class="platform-title">
+              <h3>How to Save Electrical Energy</h3>
+              <span class="arrow">&#9660;</span>
+            </div>
+            <div class="platform-body">
+              <p>
+                • Use energy-efficient appliances. <br />
+                • Turn off electrical devices when not in use. <br />
+                • Maximize the use of natural light during the day. <br />
+                • Choose LED lights, which consume less energy. <br />
+                • Regularly inspect and maintain electrical devices to ensure
+                efficiency
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="gem" id="game">
+          <section id="gems" class="hidden">
+          <div class="jdlgem">
+            <h3>Ready to Play?</h3>
+            <p>
+              Now that you’ve explored the basics of energy-saving, <br />it’s
+              time to test your knowledge! <br />This game will challenge what
+              you’ve learned in <br />
+              a fun and interactive way. <br /><br />Are you ready to make smart
+              energy choices?
+            </p>
+          </div>
+          <div class="robot-container">
+            <div class="cet" id="chat-bubble"><h1>!</h1></div>
+            <img id="robot" src="img/SPARK-MASCOT.png" alt="Sparky Robot" />
+            <div class="klik">
+              <h2>Click Me!</h2>  
+            </div>
+          </div>                   
+          <script>
+const robot = document.getElementById('robot');
+const chatBubble = document.getElementById('chat-bubble');
+const robotContainer = document.querySelector('.robot-container'); // Ensure correct reference to the container
+
+// Array of dialogues
+const dialogues = [
+"Hi, I’m Sparky! Ready to save energy and make smart choices together?",
+  "Let’s explore ways to use energy efficiently. Are you with me?",
+  "Saving energy isn’t just smart it’s fun! Let’s go!",
+  "Every small step matters. Let’s make a big difference together!",
+  "Ready to test your energy-saving knowledge? Let’s start!"
+];
+
+let firstClick = true; // Flag to track the first click
+
+// Event listener for robot click
+robot.addEventListener('click', () => {
+  let dialogue;
+
+  if (firstClick) {
+    dialogue = "Hi, I’m Sparky! Ready to save energy and make smart choices together?";
+    firstClick = false; // Reset the flag after the first click
+  } else {
+    dialogue = dialogues[Math.floor(Math.random() * dialogues.length)];
+  }
+
+  chatBubble.textContent = dialogue;
+  chatBubble.style.display = 'block';
+});
+
+// Event listener for clicking outside the robot container
+document.addEventListener('click', (event) => {
+  if (!robotContainer.contains(event.target)) {
+    chatBubble.style.display = 'none';
+  }
+});
+
+          </script>
+
+          <div class="btn play-btn">
+            <a href="quiz.html"><i>Let's Play</i></a>
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const gemSection = document.getElementById("gems");
+
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    gemSection.classList.add("visible");
+                  } else {
+                    gemSection.classList.remove("visible");
+                  }
+                });
+              },
+              { threshold: 0.2 }
+            );
+
+            observer.observe(gemSection);
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="page-4" id="event">
+      <div class="jdleve">
+        <h4>Our Programs</h4>
+      </div>
+      <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="img/poster.svg" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img/comingsoon.svg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img/comingsoon.svg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    </div>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const absoluteNav = document.querySelector(".absolute-nav");
+        if (window.scrollY >= window.innerHeight * 0.08) {
+          absoluteNav.classList.add("show");
+        } else {
+          absoluteNav.classList.remove("show");
+        }
+      });
+    </script>
+
+    <div class="modal" id="modal1">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Turn off the lights when not in use</h2>
+        <div class="modal-text">
+          <div class="point">
+            <b>Save Energy and Reduce Waste:</b>
+            <p>
+              Turning off lights when not in use helps conserve electricity,
+              minimizing unnecessary energy consumption.
+            </p>
+          </div>
+          <div class="point">
+            <b>Lower Utility Bills:</b>
+            <p>
+              By switching off unused lights, households and businesses can
+              reduce electricity expenses.
+            </p>
+          </div>
+          <div class="point">
+            <b>Environmental Benefits:</b>
+            <p>
+              Reducing energy use cuts carbon emissions, helping combat climate
+              change and protect the environment.
+            </p>
+          </div>
+          <div class="point">
+            <b>Prolong Bulb Lifespan:</b>
+            <p>
+              Turning off lights extends the life of lightbulbs, reducing
+              replacement frequency and waste.
+            </p>
+          </div>
+          <div class="point">
+            <b>Encourage Responsible Habits:</b>
+            <p>
+              It fosters awareness and mindfulness about energy conservation,
+              creating a more sustainable future.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Open the windows to allow proper air circulation</h2>
+        <div class="modal-text">
+          <div class="point">
+            <b>Reducing the use of air conditioners or fans:</b>
+            <p>
+              By opening windows, fresh air from outside can enter and replace
+              the hot air inside the house, reducing the need to turn on cooling
+              devices.
+            </p>
+          </div>
+          <div class="point">
+            <b>Improving natural ventilation:</b>
+            <p>
+              Natural air circulation helps maintain a comfortable room
+              temperature without the need for electronic devices.
+            </p>
+          </div>
+          <div class="point">
+            <b>Reducing energy consumption:</b>
+            <p>
+              When indoor air circulates well, humidity and heat do not get
+              trapped, reducing the need for dehumidifiers or other
+              temperature-regulating devices.
+            </p>
+          </div>
+          <div class="point">
+            <b>Creating a more environmentally friendly effect:</b>
+            <p>
+              By reducing electricity consumption from cooling devices, carbon
+              emissions from power plants are also decreased.
+            </p>
+          </div>
+          <div class="point">
+            <b>Lowering electricity costs:</b>
+            <p>
+              The reduced use of electricity for cooling devices results in
+              lower monthly electricity bills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Use household appliances that consume less electricity</h2>
+        <div class="modal-text">
+          <div class="point">
+            <b>Reducing energy consumption:</b>
+            <p>
+              Using energy-efficient household appliances helps lower daily
+              energy usage.
+            </p>
+          </div>
+          <div class="point">
+            <b>Lowering electricity costs:</b>
+            <p>
+              Appliances with low power consumption can help reduce monthly
+              electricity bills.
+            </p>
+          </div>
+          <div class="point">
+            <b>Reducing environmental impact:</b>
+            <p>
+              By using less energy, greenhouse gas emissions can be minimized,
+              contributing to environmental preservation.
+            </p>
+          </div>
+          <div class="point">
+            <b>Increasing energy efficiency:</b>
+            <p>
+              Energy-efficient appliances are designed to operate optimally with
+              less electricity.
+            </p>
+          </div>
+          <div class="point">
+            <b>Supporting energy sustainability:</b>
+            <p>
+              Using energy-saving appliances helps reduce dependence on
+              non-renewable energy resources.
+            </p>
+          </div>
+          <div class="point">
+            <b>Extending the lifespan of appliances:</b>
+            <p>
+              Energy-saving technology is often designed to minimize
+              overheating, which prolongs the lifespan of devices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education-->
+
+    <!-- end of Education-->
+
+    <script>
+      // Get all modals
+      const modals = document.querySelectorAll(".modal");
+
+      // Get all buttons that open modals
+      const btns = document.querySelectorAll(".tat-origin");
+
+      // Get all close buttons
+      const closes = document.querySelectorAll(".close");
+
+      // Add click event to each button
+      btns.forEach((btn, index) => {
+        btn.onclick = function () {
+          modals[index].style.display = "block";
+          document.body.style.overflow = "hidden"; // Prevent background scrolling
+        };
+      });
+
+      // Add click event to all close buttons
+      closes.forEach((close) => {
+        close.onclick = function () {
+          const modal = close.closest(".modal");
+          modal.style.display = "none";
+          document.body.style.overflow = "auto"; // Re-enable scrolling
+        };
+      });
+
+      // Close modal when clicking outside
+      window.onclick = function (event) {
+        modals.forEach((modal) => {
+          if (event.target == modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Re-enable scrolling
+          }
+        });
+      };
+    </script>
+
+    <script>
+      // Get both toggle buttons
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const darkModeToggleLeft = document.getElementById("darkModeToggleLeft");
+      const moonIcon = darkModeToggle.querySelector("i");
+      const moonIconLeft = darkModeToggleLeft.querySelector("i");
+
+      // Check for saved theme preference
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        if (savedTheme === "dark") {
+          moonIcon.classList.remove("fa-moon-o");
+          moonIcon.classList.add("fa-sun-o");
+          moonIconLeft.classList.remove("fa-moon-o");
+          moonIconLeft.classList.add("fa-sun-o");
+        }
+      }
+
+      // Function to toggle theme
+      function toggleTheme(e) {
+        e.preventDefault();
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+        // Toggle both icons
+        if (newTheme === "dark") {
+          moonIcon.classList.remove("fa-moon-o");
+          moonIcon.classList.add("fa-sun-o");
+          moonIconLeft.classList.remove("fa-moon-o");
+          moonIconLeft.classList.add("fa-sun-o");
+        } else {
+          moonIcon.classList.remove("fa-sun-o");
+          moonIcon.classList.add("fa-moon-o");
+          moonIconLeft.classList.remove("fa-sun-o");
+          moonIconLeft.classList.add("fa-moon-o");
+        }
+
+        // Set theme
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      }
+
+      // Add click listeners to both buttons
+      darkModeToggle.addEventListener("click", toggleTheme);
+      darkModeToggleLeft.addEventListener("click", toggleTheme);
+    </script>
+
+    <!-- Add this script before closing body tag -->
+    <script>
+      // Platform accordion functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const platforms = document.querySelectorAll(".platform");
+
+        platforms.forEach((platform) => {
+          const title = platform.querySelector(".platform-title");
+          const body = platform.querySelector(".platform-body");
+
+          // Set initial height to 0
+          body.style.maxHeight = "0px";
+
+          title.addEventListener("click", () => {
+            const isActive = platform.classList.contains("active");
+
+            // Close all platforms
+            platforms.forEach((p) => {
+              p.classList.remove("active");
+              p.querySelector(".platform-body").style.maxHeight = "0px";
+            });
+
+            // If this platform wasn't active, open it
+            if (!isActive) {
+              platform.classList.add("active");
+              body.style.maxHeight = body.scrollHeight + "px";
+            }
+          });
+        });
+      });
+    </script>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About SPARK</h3>
+          <p>
+            Dedicated to inspiring sustainable energy solutions for a brighter
+            future through education and innovation.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="#">Home</a>
+          <a href="#tat">Tips & Tricks</a>
+          <a href="#">Education</a>
+          <a href="quiz.html">Events</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: futureindspark@gmail.com</p>
+          <p>Phone: +62 819-3736-7186</p>
+          <p>
+            Address: Jl. Gereja Theresia No.04, RT.8/RW.4, Gondangdia, Kec.
+            Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10350
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SPARK. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
