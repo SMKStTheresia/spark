@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="quiz.css" />
+    <title>S.P.A.R.K. GAME</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="quiz.js"></script>
+  </head>
+  <body onload="randomtext()" class="light-mode">
+    <!-- Start -->
+    <div class="page start">
+      <div class="home-button">
+        <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </div>
+      <div class="light-dark">
+        <a href="#" onclick="toggleMode()"
+          ><i class="fa icon-mode fa-moon-o" aria-hidden="true"></i
+        ></a>
+      </div>
+
+      <h1>Game</h1>
+      <br />
+      <div class="robot-container">
+        <div id="chat-bubble"></div>
+        <img
+          style="width: 250px"
+          id="robot"
+          src="img/SPARK-MASCOT.png"
+          alt="Sparky Robot"
+        />
+      </div>
+      <script>
+        const robot = document.getElementById("robot");
+        const chatBubble = document.getElementById("chat-bubble");
+
+        const dialogues = [
+          "Hi, I’m Sparky! Ready to save energy and make smart choices together?",
+          "Let’s explore ways to use energy efficiently. Are you with me?",
+          "Saving energy isn’t just smart—it’s fun! Let’s go!",
+          "Every small step matters. Let’s make a big difference together!",
+          "Ready to test your energy-saving knowledge? Let’s start!",
+        ];
+
+        let firstClick = true;
+
+        robot.addEventListener("click", () => {
+          if (firstClick) {
+            chatBubble.textContent = dialogues[0];
+            firstClick = false;
+          } else {
+            const randomDialogue =
+              dialogues[Math.floor(Math.random() * dialogues.length)];
+            chatBubble.textContent = randomDialogue;
+          }
+
+          chatBubble.style.display = "block";
+
+          clearTimeout(chatBubble.timer);
+          chatBubble.timer = setTimeout(() => {
+            chatBubble.style.display = "none";
+          }, 5000);
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest(".robot-container")) {
+            chatBubble.style.display = "none";
+          }
+        });
+      </script>
+      <div class="line"></div>
+      <button onclick="plusQ(1, 0)">Start</button>
+    </div>
+    <!-- end of Start -->
+    <!-- Question 1 -->
+    <div class="page quest">
+      <div class="upq">
+        <a onclick="back()"><span class="close">&times;</span></a>
+        <div class="prog">
+          <div class="rprog"></div>
+          <div class="gprog"></div>
+        </div>
+        <a href="#" class="dark" onclick="toggleMode()">
+          <i class="fa icon-mode fa-moon-o" aria-hidden="true"></i>&nbsp;
+        </a>
+      </div>
+      <h1>Question 1</h1>
+      <img src="img/SPARK-MASCOT.png" />
+      <p>What are some simple steps you can take to save electricity?</p>
+      <div class="option">
+        <div class="line"></div>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Turn on all lights during the day
+        </button>
+        <button class="yes" onclick="plusSlides(1, 0), addScore()">
+          Turn off electronic equipment when not in use
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Leaving electronic devices in standby mode
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Using electrical devices indefinitely
+        </button>
+      </div>
+    </div>
+    <!-- end of Question 1 -->
+    <!-- Question 2 -->
+    <div class="page quest">
+      <div class="upq">
+        <a onclick="back()"><span class="close">&times;</span></a>
+        <div class="prog">
+          <div class="rprog"></div>
+          <div class="gprog"></div>
+        </div>
+        <a href="#" class="dark" onclick="toggleMode()">
+          <i class="fa icon-mode fa-moon-o" aria-hidden="true"></i>&nbsp;
+        </a>
+      </div>
+      <h1>Question 2</h1>
+      <img src="img/SPARK-MASCOT.png" />
+      <p>
+        Why is it important to turn off electronic equipment when not in use?
+      </p>
+      <div class="option">
+        <div class="line"></div>
+        <button class="no" onclick="plusSlides(1, 0)">
+          So that the device is damaged more quickly
+        </button>
+        <button class="yes" onclick="plusSlides(1, 0), addScore()">
+          To reduce electricity bills and energy consumption
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          So that the device stays cool
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          So that the electricity remains on even when it is in use
+        </button>
+      </div>
+    </div>
+    <!-- end of Question 2 -->
+    <!-- Question 3 -->
+    <div class="page quest">
+      <div class="upq">
+        <a onclick="back()"><span class="close">&times;</span></a>
+        <div class="prog">
+          <div class="rprog"></div>
+          <div class="gprog"></div>
+        </div>
+        <a href="#" class="dark" onclick="toggleMode()">
+          <i class="fa icon-mode fa-moon-o" aria-hidden="true"></i>&nbsp;
+        </a>
+      </div>
+      <h1>Question 3</h1>
+      <img src="img/SPARK-MASCOT.png" />
+      <p>How can using LED lights help reduce energy consumption?</p>
+      <div class="option">
+        <div class="line"></div>
+        <button class="no" onclick="plusSlides(1, 0)">
+          LED lights are more expensive than regular lights
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          LED lights never break
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          LED lights require higher power
+        </button>
+        <button class="yes" onclick="plusSlides(1, 0), addScore()">
+          LED lights use energy more efficiently
+        </button>
+      </div>
+    </div>
+    <!-- end of Question 3 -->
+    <!-- Question 4 -->
+    <div class="page quest">
+      <div class="upq">
+        <a onclick="back()"><span class="close">&times;</span></a>
+        <div class="prog">
+          <div class="rprog"></div>
+          <div class="gprog"></div>
+        </div>
+        <a href="#" class="dark" onclick="toggleMode()">
+          <i class="fa icon-mode fa-moon-o" aria-hidden="true"></i>&nbsp;
+        </a>
+      </div>
+      <h1>Question 4</h1>
+      <img src="img/SPARK-MASCOT.png" />
+      <p>
+        What is the positive impact of using renewable energy on energy savings?
+      </p>
+      <div class="option">
+        <div class="line"></div>
+        <button class="yes" onclick="plusSlides(1, 0), addScore()">
+          Reducing dependence on fossil fuels
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Increase operational costs
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Requires more maintenance
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Significantly reduces carbon emissions
+        </button>
+      </div>
+    </div>
+    <!-- end of Question 4 -->
+    <!-- Question 5 -->
+    <div class="page quest">
+      <div class="upq">
+        <a onclick="back()"><span class="close">&times;</span></a>
+        <div class="prog">
+          <div class="rprog"></div>
+          <div class="gprog"></div>
+        </div>
+        <a href="#" class="dark" onclick="toggleMode()">
+          <i class="fa icon-mode fa-moon-o" aria-hidden="true"></i>&nbsp;
+        </a>
+      </div>
+      <h1>Question 5</h1>
+      <img src="img/SPARK-MASCOT.png" />
+      <p>How can I reduce the use of water heaters to save energy at home?</p>
+      <div class="option">
+        <div class="line"></div>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Using the water heater continuously
+        </button>
+        <button class="yes" onclick="plusSlides(1, 0), addScore()">
+          Turn off the water heater after use
+        </button>
+        <button class="no" onclick="plusSlides( 1, 0)">
+          Use hot water for all needs
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Use a large capacity water heater
+        </button>
+      </div>
+    </div>
+    <!-- end of Question 5 -->
+    <!-- Question 6 -->
+    <div class="page quest">
+      <div class="upq">
+        <a onclick="back()"><span class="close">&times;</span></a>
+        <div class="prog">
+          <div class="rprog"></div>
+          <div class="gprog"></div>
+        </div>
+        <a href="#" class="dark" onclick="toggleMode()">
+          <i class="fa icon-mode fa-moon-o" aria-hidden="true"></i>&nbsp;
+        </a>
+      </div>
+      <h1>Question 6</h1>
+      <img src="img/SPARK-MASCOT.png" />
+      <p>What role does home insulation play in saving energy?</p>
+      <div class="option">
+        <div class="line"></div>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Makes the room feel narrower
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Requires more energy consumption
+        </button>
+        <button class="yes" onclick="plusSlides(1, 0), addScore()">
+          Helps keep the room temperature stable
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Increases air conditioning installation costs
+        </button>
+      </div>
+    </div>
+    <!-- end of Question 6 -->
+    <!-- Question 7 -->
+    <div class="page quest">
+      <div class="upq">
+        <a onclick="back()"><span class="close">&times;</span></a>
+        <div class="prog">
+          <div class="rprog"></div>
+          <div class="gprog"></div>
+        </div>
+        <a href="#" class="dark" onclick="toggleMode()">
+          <i class="fa icon-mode fa-moon-o" aria-hidden="true"></i>&nbsp;
+        </a>
+      </div>
+      <h1>Question 7</h1>
+      <img src="img/SPARK-MASCOT.png" />
+      <p>How to choose energy efficient household appliances?</p>
+      <div class="option">
+        <div class="line"></div>
+        <button class="yes" onclick="plusSlides(1, 0), addScore()">
+          Choose equipment that has an energy saving label
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Buy equipment at the lowest price
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Buy equipment with attractive designs
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Ignores device power requirements
+        </button>
+      </div>
+    </div>
+    <!-- end of Question 7 -->
+    <!-- Question 8 -->
+    <div class="page quest">
+      <div class="upq">
+        <a onclick="back()"><span class="close">&times;</span></a>
+        <div class="prog">
+          <div class="rprog"></div>
+          <div class="gprog"></div>
+        </div>
+        <a href="#" class="dark" onclick="toggleMode()">
+          <i class="fa icon-mode fa-moon-o" aria-hidden="true"></i>&nbsp;
+        </a>
+      </div>
+      <h1>Question 8</h1>
+      <img src="img/SPARK-MASCOT.png" />
+      <p>
+        How can managing electricity usage times during peak hours help reduce
+        energy consumption?
+      </p>
+      <div class="option">
+        <div class="line"></div>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Increases electricity costs
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Makes the device damaged more quickly
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Has no impact on energy consumption
+        </button>
+        <button class="yes" onclick="plusSlides(1, 0), addScore()">
+          Reducing the load on the electricity network
+        </button>
+      </div>
+    </div>
+    <!-- end of Question 8 -->
+    <!-- Question 9 -->
+    <div class="page quest">
+      <div class="upq">
+        <a onclick="back()"><span class="close">&times;</span></a>
+        <div class="prog">
+          <div class="rprog"></div>
+          <div class="gprog"></div>
+        </div>
+        <a href="#" class="dark" onclick="toggleMode()">
+          <i class="fa icon-mode fa-moon-o" aria-hidden="true"></i>&nbsp;
+        </a>
+      </div>
+      <h1>Question 9</h1>
+      <img src="img/SPARK-MASCOT.png" />
+      <p>
+        What are the benefits of using public transportation or environmentally
+        friendly vehicles in saving energy?
+      </p>
+      <div class="option">
+        <div class="line"></div>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Increase traffic congestion
+        </button>
+        <button class="yes" onclick="plusSlides(1, 0), addScore()">
+          Reducing air pollution and fossil fuel consumption
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Requires higher costs than private vehicles
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Makes the journey longer
+        </button>
+      </div>
+    </div>
+    <!-- end of Question 9 -->
+    <!-- Question 10 -->
+    <div class="page quest">
+      <div class="upq">
+        <a onclick="back()"><span class="close">&times;</span></a>
+        <div class="prog">
+          <div class="rprog"></div>
+          <div class="gprog"></div>
+        </div>
+        <a href="#" class="dark" onclick="toggleMode()">
+          <i class="fa icon-mode fa-moon-o" aria-hidden="true"></i>&nbsp;
+        </a>
+      </div>
+      <h1>Question 10</h1>
+      <img src="img/SPARK-MASCOT.png" />
+      <p>What government policies support energy savings in society?</p>
+      <div class="option">
+        <div class="line"></div>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Providing subsidies for fossil energy
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Limiting the use of renewable energy
+        </button>
+        <button class="yes" onclick="plusSlides(1, 0), addScore()">
+          Requires the use of LED lights in public spaces
+        </button>
+        <button class="no" onclick="plusSlides(1, 0)">
+          Reducing investment in environmentally friendly technologies
+        </button>
+      </div>
+    </div>
+    <!-- end of Question 10 -->
+    <!-- End  -->
+    <div class="page end">
+      <h1>Finished</h1>
+      <div class="splitter">
+        <div class="trophy">
+          <img src="img/trouphy.png" />
+        </div>
+        <div class="overall">
+          <h3 id="TotalScore">Score: 0</h3>
+          <h2 id="message">I Highly Suggest Studying</h2>
+        </div>
+      </div>
+      <div class="line"></div>
+      <a href="index.html#game"><button>Return to menu</button></a>
+    </div>
+    <!-- end of End -->
+  </body>
+</html>
